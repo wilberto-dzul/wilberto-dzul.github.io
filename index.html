@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Wilberto Dzul — Co-founder &amp; CTO · AI Full-Stack Engineer</title>
+<meta name="description" content="Wilberto Dzul — Co-fundador & CTO, AI Full-Stack Engineer y Software Architect. +14 años construyendo productos web con IA. Mérida, México." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bg:#ffffff; --surface:#f6f8fa; --border:#e4e8ec; --text:#1f2328;
+    --muted:#5b6470; --accent:#0a66c2; --accent2:#1f6feb; --chip:#eef3f8;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#0d1117; --surface:#161b22; --border:#272d36; --text:#e6edf3;
+           --muted:#9aa5b1; --accent:#4f9dff; --accent2:#388bfd; --chip:#1b2230; }
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+       background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:860px;margin:0 auto;padding:0 22px}
+  /* lang toggle */
+  .lang{position:fixed;top:16px;right:16px;z-index:10;display:flex;
+        background:var(--surface);border:1px solid var(--border);border-radius:999px;overflow:hidden;font-weight:600;font-size:13px}
+  .lang button{border:0;background:transparent;color:var(--muted);padding:7px 14px;cursor:pointer;font:inherit}
+  .lang button.active{background:var(--accent);color:#fff}
+  /* hero */
+  .hero{background:linear-gradient(135deg,var(--accent) 0%,var(--accent2) 100%);color:#fff;
+        padding:72px 0 84px;clip-path:polygon(0 0,100% 0,100% 88%,0 100%)}
+  .hero h1{font-size:clamp(30px,6vw,46px);font-weight:800;letter-spacing:-.02em}
+  .hero .role{font-size:clamp(15px,2.6vw,19px);font-weight:600;opacity:.95;margin-top:8px}
+  .hero .loc{margin-top:14px;font-size:14px;opacity:.9}
+  .links{margin-top:22px;display:flex;flex-wrap:wrap;gap:10px}
+  .links a{display:inline-flex;align-items:center;gap:7px;background:rgba(255,255,255,.15);
+           color:#fff;border:1px solid rgba(255,255,255,.25);padding:8px 14px;border-radius:999px;font-size:14px;font-weight:500}
+  .links a:hover{background:rgba(255,255,255,.28);text-decoration:none}
+  /* sections */
+  section{padding:34px 0}
+  h2{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:18px}
+  .lead{font-size:17px;color:var(--text)}
+  .bullets{list-style:none;margin-top:16px;display:grid;gap:12px}
+  .bullets li{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:13px 16px;font-size:15px}
+  .bullets b{color:var(--text)}
+  /* experience */
+  .xp{display:grid;gap:14px}
+  .job{border:1px solid var(--border);border-radius:14px;padding:16px 18px;background:var(--surface)}
+  .job .top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;align-items:baseline}
+  .job .co{font-weight:700;font-size:16px}
+  .job .date{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+  .job .pos{font-size:14px;color:var(--accent);font-weight:600;margin-top:2px}
+  .job .desc{font-size:14px;color:var(--muted);margin-top:6px}
+  .tag{display:inline-block;font-size:11px;font-weight:700;color:#fff;background:var(--accent);border-radius:6px;padding:1px 7px;margin-left:8px;vertical-align:middle}
+  /* skills */
+  .skills{display:grid;gap:16px}
+  .skillrow .k{font-weight:600;font-size:14px;margin-bottom:8px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px}
+  .chip{background:var(--chip);border:1px solid var(--border);border-radius:8px;padding:5px 11px;font-size:13px;font-weight:500}
+  /* edu + footer */
+  .edu b{font-size:16px}
+  footer{padding:30px 0 50px;text-align:center;color:var(--muted);font-size:13px;border-top:1px solid var(--border);margin-top:10px}
+  /* i18n */
+  .en{display:none}
+  body.lang-en .es{display:none}
+  body.lang-en .en{display:inline}
+  body.lang-en li .en,body.lang-en .desc .en,body.lang-en .lead.en{display:block}
+</style>
+</head>
+<body class="lang-es">
+
+<div class="lang">
+  <button id="btn-es" class="active" onclick="setLang('es')">ES</button>
+  <button id="btn-en" onclick="setLang('en')">EN</button>
+</div>
+
+<header class="hero">
+  <div class="wrap">
+    <h1>Wilberto Dzul</h1>
+    <div class="role">Co-fundador &amp; CTO · AI Full-Stack Engineer · Software Architect</div>
+    <div class="loc">📍 Mérida, Yucatán, México 🇲🇽</div>
+    <div class="links">
+      <a href="https://www.linkedin.com/in/wilberto-dzul/" target="_blank" rel="noopener">in LinkedIn</a>
+      <a href="https://github.com/wilberto-dzul" target="_blank" rel="noopener">⌥ GitHub</a>
+      <a href="mailto:wilberto.dzul@gmail.com">✉ Email</a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section>
+    <h2><span class="es">Acerca de mí</span><span class="en">About</span></h2>
+    <p class="lead es">Ingeniero de software con <b>+14 años de experiencia</b> y <b>co-fundador/CTO en serie</b>. Construyo productos web de punta a punta — del schema de base de datos al pixel final — con foco en <b>IA aplicada</b>, <b>arquitectura limpia</b> y <b>sistemas a escala</b>. He liderado equipos de desarrollo (web, móvil y cloud) y diseñado la arquitectura de varios productos SaaS multi-tenant.</p>
+    <p class="lead en">Software engineer with <b>14+ years of experience</b> and a <b>serial co-founder/CTO</b>. I build web products end to end — from the database schema to the final pixel — focused on <b>applied AI</b>, <b>clean architecture</b>, and <b>systems at scale</b>. I've led development teams (web, mobile, cloud) and architected several multi-tenant SaaS products.</p>
+    <ul class="bullets">
+      <li>🤖 <b><span class="es">Orquestación de agentes IA</span><span class="en">AI agent orchestration</span></b> — <span class="es">pipelines de desarrollo autónomo (Claude Code, Ralph, Hermes, MCP) que toman issues y abren PRs solos en workspaces multi-repo.</span><span class="en">autonomous dev pipelines (Claude Code, Ralph, Hermes, MCP) that pick up issues and open PRs on their own across multi-repo workspaces.</span></li>
+      <li>🧠 <b><span class="es">IA aplicada a producto</span><span class="en">Applied AI in production</span></b> — <span class="es">RAG, agentes y modelos (Claude, Gemini) en flujos reales: del backend al frontend.</span><span class="en">RAG, agents and models (Claude, Gemini) in real product flows: from backend to frontend.</span></li>
+      <li>🏗️ <b><span class="es">Arquitectura &amp; liderazgo técnico</span><span class="en">Architecture &amp; tech leadership</span></b> — <span class="es">diseño de sistemas, estándares de código y dirección de equipos.</span><span class="en">systems design, coding standards and team leadership.</span></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2><span class="es">Experiencia</span><span class="en">Experience</span></h2>
+    <div class="xp">
+      <div class="job">
+        <div class="top"><span class="co">QuestionPro <span class="tag"><span class="es">actual</span><span class="en">current</span></span></span><span class="date">2022 — <span class="es">actualidad</span><span class="en">present</span></span></div>
+        <div class="pos">AI Full-Stack Developer</div>
+      </div>
+      <div class="job">
+        <div class="top"><span class="co">The Palace Company</span><span class="date">2023 — 2025</span></div>
+        <div class="pos"><span class="es">Arquitecto de software</span><span class="en">Software Architect</span></div>
+        <div class="desc"><span class="es">Arquitectura de sistemas y plataformas internas.</span><span class="en">Systems architecture and internal platforms.</span></div>
+      </div>
+      <div class="job">
+        <div class="top"><span class="co">TuDashboard</span><span class="date">2022 — 2024</span></div>
+        <div class="pos"><span class="es">Co-fundador &amp; CTO</span><span class="en">Co-founder &amp; CTO</span></div>
+        <div class="desc"><span class="es">Dashboards y activación de campañas para marcas.</span><span class="en">Dashboards and campaign activation for brands.</span></div>
+      </div>
+      <div class="job">
+        <div class="top"><span class="co">MailVibes</span><span class="date">2019 — 2022</span></div>
+        <div class="pos"><span class="es">Co-fundador &amp; CTO</span><span class="en">Co-founder &amp; CTO</span></div>
+        <div class="desc"><span class="es">Email tracking y notificaciones con extensión de Chrome.</span><span class="en">Email tracking and notifications with a Chrome extension.</span></div>
+      </div>
+      <div class="job">
+        <div class="top"><span class="co">Swapwink</span><span class="date">2014 — 2019</span></div>
+        <div class="pos">CTO</div>
+        <div class="desc"><span class="es">Liderazgo de equipos de desarrollo web, móvil y cloud.</span><span class="en">Led web, mobile and cloud development teams.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="es">Habilidades</span><span class="en">Skills</span></h2>
+    <div class="skills">
+      <div class="skillrow"><div class="k">Frontend</div><div class="chips">
+        <span class="chip">TypeScript</span><span class="chip">Vue.js</span><span class="chip">Nuxt</span><span class="chip">React</span><span class="chip">Tailwind CSS</span>
+      </div></div>
+      <div class="skillrow"><div class="k">Backend &amp; Cloud</div><div class="chips">
+        <span class="chip">Node.js</span><span class="chip">Hono</span><span class="chip">Express</span><span class="chip">AWS</span><span class="chip">Serverless</span><span class="chip">Docker</span><span class="chip">Terraform</span><span class="chip">Stripe</span>
+      </div></div>
+      <div class="skillrow"><div class="k"><span class="es">Datos</span><span class="en">Data</span></div><div class="chips">
+        <span class="chip">MySQL</span><span class="chip">PostgreSQL</span><span class="chip">Drizzle ORM</span><span class="chip">Redis</span>
+      </div></div>
+      <div class="skillrow"><div class="k"><span class="es">IA &amp; Agentes</span><span class="en">AI &amp; Agents</span></div><div class="chips">
+        <span class="chip">Claude</span><span class="chip">Gemini</span><span class="chip">Vercel AI SDK</span><span class="chip">MCP</span><span class="chip">LlamaIndex / RAG</span><span class="chip">LiveKit</span>
+      </div></div>
+      <div class="skillrow"><div class="k">Testing</div><div class="chips">
+        <span class="chip">Vitest</span><span class="chip">Playwright</span>
+      </div></div>
+    </div>
+  </section>
+
+  <section class="edu">
+    <h2><span class="es">Educación</span><span class="en">Education</span></h2>
+    <b>Universidad Autónoma de Yucatán</b><br />
+    <span class="es">Licenciatura en Ingeniería de Software · 2005–2010</span>
+    <span class="en">B.Sc. in Software Engineering · 2005–2010</span>
+  </section>
+
+</main>
+
+<footer>
+  <span class="es">Hecho con código · </span><span class="en">Built with code · </span>
+  <a href="https://github.com/wilberto-dzul">github.com/wilberto-dzul</a>
+</footer>
+
+<script>
+  function setLang(l){
+    document.body.classList.toggle('lang-en', l==='en');
+    document.documentElement.lang=l;
+    document.getElementById('btn-es').classList.toggle('active', l==='es');
+    document.getElementById('btn-en').classList.toggle('active', l==='en');
+    try{localStorage.setItem('lang',l)}catch(e){}
+  }
+  (function(){
+    var saved;try{saved=localStorage.getItem('lang')}catch(e){}
+    var l = saved || ((navigator.language||'es').slice(0,2)==='en'?'en':'es');
+    setLang(l);
+  })();
+</script>
+</body>
+</html>
